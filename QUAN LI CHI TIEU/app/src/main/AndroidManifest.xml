@@ -21,6 +21,8 @@
             android:exported="true" />
         <activity android:name=".UI.ThongBaoActivity"
             android:exported="true" />
+        <activity android:name=".UI.HomeCaNhanActivity"
+            android:exported="true" />
 
 
         <!-- Các Activity phụ -->
