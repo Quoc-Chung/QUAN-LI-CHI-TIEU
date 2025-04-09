@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corner"
+    android:backgroundTint="#F2F1EB"
+    android:columnCount="5"
+    android:rowCount="1"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ic_soGiaoDich"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:src="@drawable/sogiaodich"/>
+    <ImageView
+        android:id="@+id/ic_viTien"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:src="@drawable/vitien"/>
+    <ImageView
+        android:id="@+id/ic_dauCong"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:src="@drawable/more" />
+    <ImageView
+    android:id="@+id/ic_thongKe"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:src="@drawable/thongke" />
+    <ImageView
+        android:id="@+id/ic_caiDat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:src="@drawable/caidat" />
+</GridLayout>
