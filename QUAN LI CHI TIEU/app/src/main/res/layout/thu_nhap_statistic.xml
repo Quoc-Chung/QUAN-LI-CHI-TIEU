@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".Chi_Tieu_Statistic">
+    tools:context=".UI.Chi_Tieu_Activity">
 
     <!-- Tiêu đề "Chi tiêu" -->
     <Button

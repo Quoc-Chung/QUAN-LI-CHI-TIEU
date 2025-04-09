@@ -1,4 +1,4 @@
-package com.example.quanlichitieu;
+package com.example.quanlichitieu.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import  com.example.quanlichitieu.User;
+import com.example.quanlichitieu.Model.User;
+import com.example.quanlichitieu.R;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.quanlichitieu;
+package com.example.quanlichitieu.Model;
 public class User {
 
     private int avatarResId;

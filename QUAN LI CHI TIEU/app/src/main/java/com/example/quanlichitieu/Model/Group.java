@@ -1,4 +1,4 @@
-package com.example.quanlichitieu;
+package com.example.quanlichitieu.Model;
 
 
 import java.util.List;

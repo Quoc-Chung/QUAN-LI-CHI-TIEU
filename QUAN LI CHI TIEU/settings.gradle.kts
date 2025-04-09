@@ -26,3 +26,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "QuanLiChiTieu"
 include(":app")
+

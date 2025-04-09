@@ -1,6 +1,6 @@
 package com.example.quanlichitieu.api;
 
-import com.example.quanlichitieu.User;
+import com.example.quanlichitieu.Model.User;
 
 import java.util.List;
 

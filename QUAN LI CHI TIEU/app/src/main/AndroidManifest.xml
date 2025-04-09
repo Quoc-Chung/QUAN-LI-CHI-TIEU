@@ -24,10 +24,10 @@
 
 
         <!-- Các Activity phụ -->
-        <activity android:name=".Chi_Tieu_Statistic" />
-        <activity android:name=".Thu_Nhap_Statistic" />
-        <activity android:name=".Group_Chi_statistic" />
-        <activity android:name=".Group_Thu_statistic" />
+        <activity android:name=".UI.Chi_Tieu_Activity" />
+        <activity android:name=".UI.Thu_Nhap_Activity" />
+        <activity android:name=".UI.Group_Chi_Activity" />
+        <activity android:name=".UI.Group_Thu_Activity" />
 
         <!-- Activity chính (launcher) -->
         <activity

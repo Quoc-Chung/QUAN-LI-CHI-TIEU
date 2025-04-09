@@ -1,10 +1,11 @@
-package com.example.quanlichitieu;
+package com.example.quanlichitieu.UI;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
@@ -13,29 +14,27 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.github.mikephil.charting.animation.Easing;
+import com.example.quanlichitieu.Adapter.UserAdapter;
+import com.example.quanlichitieu.Model.User;
+import com.example.quanlichitieu.R;
 import com.github.mikephil.charting.charts.BarChart;
-import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.data.PieData;
-import com.github.mikephil.charting.data.PieDataSet;
-import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Thu_Nhap_Statistic extends AppCompatActivity {
+public class Group_Thu_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.thu_nhap_statistic);
+        setContentView(R.layout.group_thu_statistic);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -44,38 +43,24 @@ public class Thu_Nhap_Statistic extends AppCompatActivity {
         });
 
         initSpinners();
-        setPiechart();   // Gọi Pie Chart
         setBarChart();   // Gọi Bar Chart
-        changetoChiTieu();
+        createListview();
+        changetoChi();
     }
 
-    public void setPiechart() {
-        PieChart pie = findViewById(R.id.pieChart);
+    private void createListview() {
+        ListView listView = findViewById(R.id.GroupList);
 
-        List<PieEntry> entries = new ArrayList<>();
-        entries.add(new PieEntry(40f, "Ăn uống"));
-        entries.add(new PieEntry(25f, "Di chuyển"));
-        entries.add(new PieEntry(20f, "Giải trí"));
-        entries.add(new PieEntry(15f, "Khác"));
+        List<User> users = new ArrayList<>();
+        users.add(new User("Nam", R.drawable.caidat));
+        users.add(new User("Linh", R.drawable.more));
+        users.add(new User("Hà", R.drawable.vitien));
 
-        PieDataSet dataSet = new PieDataSet(entries, "Chi tiêu tháng 4");
-        dataSet.setColors(ColorTemplate.MATERIAL_COLORS);
-        dataSet.setValueTextColor(Color.WHITE);
-        dataSet.setValueTextSize(14f);
+        UserAdapter adapter = new UserAdapter(this, users);
+        listView.setAdapter(adapter);
 
-        PieData data = new PieData(dataSet);
-        pie.setData(data);
-
-        pie.setUsePercentValues(true);
-        pie.getDescription().setEnabled(false);
-        pie.setCenterText("Tháng 4");
-        pie.setCenterTextColor(Color.WHITE);
-        pie.setEntryLabelColor(Color.WHITE);
-        pie.setHoleColor(Color.TRANSPARENT);
-        pie.animateY(1000, Easing.EaseInOutQuad);
-
-        pie.invalidate();
     }
+
 
     public void setBarChart() {
         BarChart barChart = findViewById(R.id.barChart);
@@ -148,11 +133,11 @@ public class Thu_Nhap_Statistic extends AppCompatActivity {
         yearAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         yearSpinner.setAdapter(yearAdapter);
     }
-    public void changetoChiTieu() {
+    public void changetoChi() {
         Button ThuNhap = findViewById(R.id.ChiTieu);
-        ThuNhap.setOnClickListener(v -> {;
-            Intent intent = new Intent(Thu_Nhap_Statistic.this, Chi_Tieu_Statistic.class);
+        ThuNhap.setOnClickListener(v -> {
+            Intent intent = new Intent(Group_Thu_Activity.this, Group_Chi_Activity.class);
             startActivity(intent);
         });
-}
+    }
 }

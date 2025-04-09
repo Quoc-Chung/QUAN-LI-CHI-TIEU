@@ -1,4 +1,4 @@
-package com.example.quanlichitieu;
+package com.example.quanlichitieu.Adapter;
 
 
 import android.content.Context;
@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.quanlichitieu.Model.Group;
 import com.example.quanlichitieu.R;
 
 import java.util.List;
