@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#171b27"
+    android:orientation="vertical">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpg_main"
+        android:layout_width="match_parent"
+        android:layout_height="626dp"
+        android:layout_above="@id/bottom_bar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-723dp" />
+
+    <include
+        android:id="@+id/bottom_bar"
+        layout="@layout/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="367dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="654dp"
+        android:gravity="center"
+        android:text="Giao dịch mới"
+        android:textColor="#E4E4E4"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="202dp"
+        android:layout_marginBottom="594dp"
+        android:background="@drawable/square_button"
+        android:text="Cá Nhân" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="594dp"
+        android:background="@drawable/square_button"
+        android:text="Nhóm" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="513dp"
+        android:ems="10"
+        android:hint="Mã giao dịch *"
+        android:inputType="text"
+        android:textColorHint="#EFE8E8"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="455dp"
+        android:ems="10"
+        android:hint="Tên giao dịch *"
+        android:inputType="text"
+        android:textColorHint="#EFE8E8"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="288dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="397dp"
+        android:ems="10"
+        android:hint="Số tiền giao dịch *"
+        android:inputType="text"
+        android:textColorHint="#EFE8E8"
+        android:textSize="16sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="135dp"
+        android:ems="10"
+        android:hint="Mô tả *"
+        android:inputType="text"
+        android:textColorHint="#EFE8E8"
+        android:textSize="16sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="421dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="262dp"
+        android:prompt="@string/loai_giao_dich" />
+
+    <Spinner
+        android:id="@+id/spinner5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="488dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="195dp"
+        android:prompt="@string/loai_giao_dich" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="369dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="328dp"
+        android:prompt="@string/loai_giao_dich" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="109dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="627dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="56dp"
+        android:backgroundTint="#f80101"
+        android:text="Hủy" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="109dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="281dp"
+        android:layout_marginTop="628dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="55dp"
+        android:backgroundTint="#3212fb"
+        android:text="Lưu" />
+
+</RelativeLayout>

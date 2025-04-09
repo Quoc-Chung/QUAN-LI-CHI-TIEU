@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">QuanLiChiTieu</string>
+    <string name="app_name" translatable="false">QuanLiChiTieu</string>
+    <string name="loai_giao_dich">Chọn loại giao dịch</string>
 </resources>
