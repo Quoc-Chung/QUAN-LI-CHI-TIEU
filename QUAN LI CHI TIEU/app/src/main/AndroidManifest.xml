@@ -22,6 +22,14 @@
         <activity android:name=".UI.ThongBaoActivity"
             android:exported="true" />
 
+
+        <!-- Các Activity phụ -->
+        <activity android:name=".Chi_Tieu_Statistic" />
+        <activity android:name=".Thu_Nhap_Statistic" />
+        <activity android:name=".Group_Chi_statistic" />
+        <activity android:name=".Group_Thu_statistic" />
+
+        <!-- Activity chính (launcher) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
