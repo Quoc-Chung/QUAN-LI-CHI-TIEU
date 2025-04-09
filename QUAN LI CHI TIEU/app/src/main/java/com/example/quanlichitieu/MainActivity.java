@@ -1,17 +1,12 @@
 package com.example.quanlichitieu;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.quanlichitieu.UI.Chi_Tieu_Activity;
-import com.example.quanlichitieu.UI.Group_Chi_Activity;
-import com.example.quanlichitieu.UI.LoiNhacActivity;
-import com.example.quanlichitieu.UI.NhomGiaoDich;
-import com.example.quanlichitieu.UI.TaiKhoanCuaToiActivity;
-import com.example.quanlichitieu.UI.ThongBaoActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +15,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        Intent intent = new Intent(this, Group_Chi_Activity.class);
-        startActivity(intent);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
     }
 }
