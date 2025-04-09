@@ -12,15 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuanLiChiTieu"
         tools:targetApi="31">
+
+        <!-- Các Activity phụ -->
+        <activity android:name=".Chi_Tieu_Statistic" />
+        <activity android:name=".Thu_Nhap_Statistic" />
+        <activity android:name=".Group_Chi_statistic" />
+        <activity android:name=".Group_Thu_statistic" />
+
+        <!-- Activity chính (launcher) -->
         <activity
-            android:name=".MainActivity"
+            android:name=".Statistic_Page"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
