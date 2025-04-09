@@ -1,214 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#171b27"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/vpg_main"
-        android:layout_width="match_parent"
-        android:layout_height="626dp"
-        android:layout_above="@id/bottom_bar"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-723dp" />
-
-    <include
-        android:id="@+id/bottom_bar"
-        layout="@layout/bottom_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
-
+    <!-- Tiêu đề -->
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="367dp"
-        android:layout_height="56dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginBottom="654dp"
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Giao dịch mới"
         android:textColor="#E4E4E4"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="182dp"
+    <!-- Nhóm nút Cá nhân & Nhóm -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="89dp"
-        android:layout_marginEnd="202dp"
-        android:layout_marginBottom="594dp"
-        android:background="@drawable/square_button"
-        android:text="Cá Nhân" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="182dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="210dp"
-        android:layout_marginTop="89dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="594dp"
-        android:background="@drawable/square_button"
-        android:text="Nhóm" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:background="@drawable/square_button"
+            android:text="Cá Nhân"
+            android:layout_marginEnd="8dp"/>
 
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:background="@drawable/square_button"
+            android:text="Nhóm"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Các EditText -->
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="172dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="513dp"
-        android:ems="10"
         android:hint="Mã giao dịch *"
         android:inputType="text"
         android:textColorHint="#EFE8E8"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
 
     <EditText
         android:id="@+id/editTextText2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="230dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="455dp"
-        android:ems="10"
         android:hint="Tên giao dịch *"
         android:inputType="text"
         android:textColorHint="#EFE8E8"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
 
     <EditText
         android:id="@+id/editTextText3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="288dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="397dp"
-        android:ems="10"
         android:hint="Số tiền giao dịch *"
-        android:inputType="text"
+        android:inputType="number"
         android:textColorHint="#EFE8E8"
         android:textSize="16sp"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:layout_marginBottom="8dp"/>
 
+    <!-- Spinner Loại giao dịch -->
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:prompt="@string/loai_giao_dich"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Spinner Tài khoản -->
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:prompt="@string/loai_giao_dich"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Spinner Danh mục -->
+
+    <!-- Mô tả -->
     <EditText
         android:id="@+id/editTextText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="550dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="135dp"
-        android:ems="10"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:hint="Mô tả *"
         android:inputType="text"
         android:textColorHint="#EFE8E8"
         android:textSize="16sp"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:layout_marginBottom="16dp"/>
 
-    <Spinner
-        android:id="@+id/spinner3"
-        android:layout_width="wrap_content"
+    <!-- Nút Lưu và Hủy -->
+    <LinearLayout
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="421dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="262dp"
-        android:prompt="@string/loai_giao_dich" />
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="120dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-    <Spinner
-        android:id="@+id/spinner5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="488dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="195dp"
-        android:prompt="@string/loai_giao_dich" />
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#f80101"
+            android:text="Hủy" />
 
-    <Spinner
-        android:id="@+id/spinner4"
-        android:layout_width="369dp"
-        android:layout_height="48dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="328dp"
-        android:prompt="@string/loai_giao_dich" />
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#3212fb"
+            android:text="Lưu" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="109dp"
-        android:layout_height="40dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="147dp"
-        android:layout_marginTop="627dp"
-        android:layout_marginEnd="155dp"
-        android:layout_marginBottom="56dp"
-        android:backgroundTint="#f80101"
-        android:text="Hủy" />
+    <!-- ViewPager2 -->
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="109dp"
-        android:layout_height="40dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="281dp"
-        android:layout_marginTop="628dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="55dp"
-        android:backgroundTint="#3212fb"
-        android:text="Lưu" />
-
-</RelativeLayout>
+    <!-- Bottom Bar -->
+</LinearLayout>

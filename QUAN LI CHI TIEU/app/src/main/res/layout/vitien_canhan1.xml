@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#171b27"
+    android:padding="16dp">
+
+    <!-- Nút bấm -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/square_button"
+            android:text="Cá nhân"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/square_button"
+            android:text="Nhóm" />
+    </LinearLayout>
+
+    <!-- ViewPager -->
+
+    <!-- Avatar và ngày -->
+
+    <!-- Spinner -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgAvartar"
+            android:layout_width="59dp"
+            android:layout_height="59dp"
+            android:src="@drawable/avartar" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="47dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="QUỐC CHUNG"
+            android:textColor="#E8DDDD"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Thu Nhập -->
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="    Thu Nhập"
+        android:textColor="#EFECEC"
+        android:layout_marginTop="12dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/thunhap"
+        android:layout_marginTop="8dp" />
+
+    <!-- Chi tiêu -->
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ 50000000 VND"
+        android:textColor="#11D91A" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="    Chi Tiêu"
+        android:textColor="#EFECEC"
+        android:layout_marginTop="12dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/chitieu" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" - 400000000 VND"
+        android:textColor="#E00526" />
+
+    <!-- Danh sách -->
+    <EditText
+        android:id="@+id/editTextDate2"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:text="18/10/2004"
+        android:textColor="#E4DEDE" />
+
+    <ListView
+        android:layout_width="389dp"
+        android:layout_height="322dp"
+        android:layout_marginTop="12dp"
+        android:background="#373b46">
+
+    </ListView>
+
+    <!-- Bottom bar -->
+    <include
+        layout="@layout/bottom_bar"
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

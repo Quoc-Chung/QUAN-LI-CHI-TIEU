@@ -1,120 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#171b27"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#171b27"
-    android:orientation="vertical">
+    android:paddingTop="32dp"
+    android:paddingBottom="32dp">
 
+    <!-- Thanh tiêu đề -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#171b27"
+            android:text="<"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Quản Lí Nhóm"
+            android:textColor="#EBE4E4"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Dòng 1: Danh sách nhóm -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="20dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingHorizontal="24dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="16dp"
+            app:srcCompat="@drawable/anh_doanh_nghiep" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="51dp"
+            android:layout_weight="1"
+            android:backgroundTint="#E8E4E4"
+            android:text="Danh Sách Nhóm"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Dòng 2: Thêm nhóm mới -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="20dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingHorizontal="24dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="16dp"
+            app:srcCompat="@drawable/more" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="51dp"
+            android:layout_weight="1"
+            android:backgroundTint="#E8E4E4"
+            android:text="Thêm Nhóm Mới"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- ViewPager2 -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/vpg_main"
         android:layout_width="match_parent"
-        android:layout_height="626dp"
-        android:layout_above="@id/bottom_bar"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-723dp" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
 
+    <!-- Bottom bar -->
     <include
         android:id="@+id/bottom_bar"
         layout="@layout/bottom_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="51dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="123dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="557dp"
-        android:backgroundTint="#E8E4E4"
-        android:text="Danh Sách Nhóm"
-        android:textColor="#000000"
-        android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="51dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="480dp"
-        android:backgroundTint="#E8E4E4"
-        android:text="Thêm Nhóm Mới"
-        android:textColor="#000000"
-        android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="-8dp"
-        android:layout_marginTop="37dp"
-        android:backgroundTint="#171b27"
-        android:text="&lt;"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="263dp"
-        android:layout_height="51dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="89dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="59dp"
-        android:layout_marginBottom="644dp"
-        android:gravity="center"
-        android:paddingRight="5dp"
-        android:text="Quản Lí Nhóm"
-        android:textColor="#EBE4E4"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="38dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginEnd="305dp"
-        android:layout_marginBottom="563dp"
-        app:srcCompat="@drawable/anh_doanh_nghiep" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="38dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="205dp"
-        android:layout_marginEnd="303dp"
-        android:layout_marginBottom="488dp"
-        app:srcCompat="@drawable/more" />
-
-
-</RelativeLayout>
+        android:layout_height="wrap_content" />
+</LinearLayout>
