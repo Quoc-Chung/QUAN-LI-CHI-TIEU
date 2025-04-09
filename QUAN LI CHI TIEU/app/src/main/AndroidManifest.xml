@@ -12,6 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuanLiChiTieu"
         tools:targetApi="31">
+        <activity android:name=".UI.NhomGiaoDich"
+            android:exported="true" />
+
+        <activity android:name=".UI.LoiNhacActivity"
+            android:exported="true" />
+        <activity android:name=".UI.TaiKhoanCuaToiActivity"
+            android:exported="true" />
+        <activity android:name=".UI.ThongBaoActivity"
+            android:exported="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

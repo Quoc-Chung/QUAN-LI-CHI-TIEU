@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:elevation="8dp">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tạo lời nhắc"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- Ô nhập mô tả -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mô tả"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/edtMoTa"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="top"
+        android:padding="8dp"
+        android:hint="Nhập nội dung..."
+        android:textColor="#000000"
+        android:textSize="14sp"/>
+
+    <!-- Ngày nhắc -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ngày nhắc *"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/edtNgayNhac"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Chọn ngày"
+            android:focusable="false"
+            android:textColor="#000000"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/btnChonNgay"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_calendar" />
+    </LinearLayout>
+
+    <!-- Nút Hủy và Lưu -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+
+        <Button
+            android:id="@+id/btnHuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HỦY"
+            android:backgroundTint="@color/red"
+            android:padding="10dp"/>
+
+        <View android:layout_width="10dp" android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/btnLuu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LƯU"
+            android:backgroundTint="@color/blue"
+            android:padding="10dp"
+            android:layout_marginStart="16dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

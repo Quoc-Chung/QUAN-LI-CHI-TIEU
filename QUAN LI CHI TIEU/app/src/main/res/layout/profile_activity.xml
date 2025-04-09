@@ -1,0 +1,184 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_create_group">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <!-- Nút Back -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Thông báo"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+
+        <!-- Nút More Options -->
+        <ImageView
+            android:id="@+id/btnMoreOptions"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_more_vert"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:background="@drawable/bg_create_group">>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Avatar -->
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_avatar_1"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop" />
+
+        <!-- Thu nhập, Chi tiêu, Số dư -->
+        <TextView
+            android:id="@+id/tvIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thu nhập +60,000,000 VND"
+            android:textColor="#FF4081"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chi tiêu -10,000,000 VND"
+            android:textColor="#FF5252"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số dư +50,000,000 VND"
+            android:textColor="#4CAF50"
+            android:textSize="14sp" />
+
+        <!-- Tên -->
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tên"
+            android:text="Nguyễn Trần Minh Hòa"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:background="@drawable/edittext_background"
+            android:layout_marginTop="16dp" />
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:text="hoa123456987@gmail.com"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:background="@drawable/edittext_background"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="12dp" />
+
+        <!-- Ngày sinh -->
+        <EditText
+            android:id="@+id/edtBirthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ngày sinh"
+            android:text="30/08/2001"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:background="@drawable/edittext_background"
+            android:drawableEnd="@drawable/ic_calendar"
+            android:focusable="false"
+            android:layout_marginTop="12dp" />
+
+        <!-- Mô tả bản thân -->
+        <EditText
+            android:id="@+id/edtBio"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Mô tả bản thân"
+            android:gravity="top"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:background="@drawable/edittext_background"
+            android:layout_marginTop="12dp"
+            android:inputType="textMultiLine" />
+
+        <!-- Nhóm -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nhóm"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_avatar_2"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_avatar_3"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="+15"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/circle_background"
+                android:padding="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161B27">
+
+    <!-- Thanh tiêu đề -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#161B27"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cài đặt - Chọn nhóm giao dịch"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <!-- Tab Chi tiêu - Thu nhập -->
+    <LinearLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/header"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tab_chi_tieu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chi tiêu"
+            android:textColor="#FFFFFF"
+            android:padding="10dp"
+            android:background="@drawable/tab_selected_bg"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tab_thu_nhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thu nhập"
+            android:textColor="#FFFFFF"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+
+    <!-- Lưới danh mục -->
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/tab_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="602dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+
+
+
+
+</RelativeLayout>
